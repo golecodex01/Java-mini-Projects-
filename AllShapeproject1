@@ -1,0 +1,151 @@
+public class BasicProject1Shape {
+
+    public static void main(String[] args) {
+        
+         Rectangle Rec1=new  Rectangle(2,3);
+         Rectangle Rec2=new  Rectangle(12,14);
+         Rectangle Rec3=new  Rectangle(11,90);
+           
+         Circle Cir1=new Circle(3);
+         Circle Cir2=new Circle(9);
+         Circle Cir3=new Circle(21);
+         
+         Triangle tri1=new Triangle(12,5);
+         Triangle tri2=new Triangle(10,5);
+         Triangle tri3=new Triangle(3,7);
+         
+         
+         System.out.println("Perimeter of Rec1 = "+Rec1.getRectanglePerimeter());
+         System.out.println("Area of Rec1 = "+Rec1.getRectangleArea());
+
+         System.out.println("Perimeter of Rec2 = "+Rec2.getRectanglePerimeter());
+         System.out.println("Area of Rec2 = "+Rec2.getRectangleArea());
+         
+         System.out.println("Perimeter of Rec3 = "+Rec3.getRectanglePerimeter());
+         System.out.println("Area of Rec3 = "+Rec3.getRectangleArea());
+                System.out.println("-------------------------------------------");
+
+         System.out.println("Circumference of Cir1 = "+Cir1.getCircumferenceCircle());
+         System.out.println("Area of Cir1 = "+Cir1.getAreaCircle());
+        
+         System.out.println("Circumference of Cir2 = "+Cir2.getCircumferenceCircle());
+         System.out.println("Area of Cir2 = "+Cir2.getAreaCircle());
+        
+         System.out.println("Circumference of Cir3 = "+Cir3.getCircumferenceCircle());
+         System.out.println("Area of Cir3 = "+Cir3.getAreaCircle());
+         System.out.println("-------------------------------------------");
+         System.out.println("Area of Tri1 is "+tri1.getAreaTriangle());
+         System.out.println("Area of Tri2 is "+tri2.getAreaTriangle());
+         System.out.println("Area of Tri3 is "+tri3.getAreaTriangle());
+
+         System.out.println("==============Thank You ===============");
+    } 
+}
+
+
+
+
+
+
+public class Rectangle {
+    
+    private double length;
+    private double breadth;
+    
+    public Rectangle(double l,double b){
+        length=l;
+        breadth=b;
+    }
+    
+    public void setLength(double length){
+        length=length;
+        
+    }
+    public void setBreadth(double Breadth){
+        Breadth=breadth;
+        
+    }
+    
+    public double getLength(){
+        return length;
+    }
+     public double getBreadth(){
+        return breadth;
+    } 
+      public double getRectanglePerimeter(){
+         double perimeter;
+         perimeter=2*(length+breadth);
+         return perimeter;
+     }
+     
+   
+     public double getRectangleArea(){
+         double area;
+         area=length*breadth;
+         return area;
+     }
+     
+    
+}
+
+
+
+public class Circle {
+    
+    private double radius;
+    
+    public Circle(double radius){
+        this.radius=radius;
+    }
+    public void setRadius(double radius ){
+        this.radius=radius;
+             
+    }
+    public double  getRadius( ){
+        return radius;
+             
+    }
+    public double getCircumferenceCircle(){
+        double cir;
+        cir=2*3.14*radius;
+        return cir;
+    }
+    public double getAreaCircle(){
+        double Area;
+        Area=(3.14*radius*radius);
+        return Area;
+    }
+}
+
+
+
+public class Triangle {
+    
+    private double base;
+    private double height;
+    
+    public Triangle(double b,double h){
+        this.base=b;
+        this.height=h;
+    }
+    
+    public void setBase(double b){
+        this.base=b;
+    }
+    public double getBase(){
+        return base;
+    }
+      public void setHiegth(double h){
+        this.height=h;
+    }
+    public double getHiegth(){
+        return height;
+    }
+    
+    public double getAreaTriangle(){
+        double area;
+        area=(base*height)/2;
+        return area;
+    }
+    
+}
