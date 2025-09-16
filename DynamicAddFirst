@@ -1,0 +1,56 @@
+public class DynamicArray {
+
+    public static void main(String[] args) {
+        
+        Array obj=new Array();
+        
+        obj.addFirst(12);
+        obj.addFirst(14);
+        obj.addFirst(15);
+        
+        obj.getPrint();
+        
+        
+        
+        
+        
+        System.out.println("Hello World!");
+    }
+}
+
+
+
+
+
+
+
+public class Array {
+    
+      int []data=new int[0];
+      
+      public boolean addFirst(int value){
+          
+          int temp[]=data;
+          
+          data=new int [temp.length+1];
+          int dataindex=0;
+          data[dataindex]=value;
+          dataindex++;
+          int tempindex=0;
+          
+          for(int i:temp){
+              data[dataindex]=temp[tempindex];
+              dataindex++;
+              tempindex++;
+          }
+    
+       return true;
+    }
+    
+    public void getPrint(){
+     
+        for(int i=0;i<data.length;i++){
+            System.out.println(data[i]);
+        }
+    }
+}
